@@ -24,7 +24,8 @@ const routes=[
 ];
 //3.创建路由实例
 const router = new VueRouter({
-   routes
+   routes,
+   mode:'history'
 });
 //4.导出router实例，传入到vue实例
 export default router
