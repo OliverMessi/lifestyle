@@ -15,7 +15,10 @@ const routes=[
   },
   {
     path: '/home',
-    component: Home
+    component: Home,
+    meta: {
+        requireAuth: true
+    }
   },
   {
     path: '/login',

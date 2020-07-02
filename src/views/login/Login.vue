@@ -34,7 +34,10 @@
             login() {
                 login(this.loginForm.userName, this.loginForm.passWord).then(res => {
                     if (res.code === 200) {
-                        this.$router.replace({path: '/home'})
+                        // this.$router.replace({path: '/home'})
+                        this.$store.commit('login', this.loginForm);
+                        var path = this.$route.query.redirect;
+                        this.$router.replace({path: path === '/' || path === undefined ? '/home' : path})
                     }
                 })
             }
@@ -44,7 +47,7 @@
 
 <style scoped>
     #login {
-        background: url("../../assets/bgy.jpg") no-repeat;
+        background: url("../../assets/img/bgy.jpg") no-repeat;
         background-position: center;
         height: 100%;
         width: 100%;

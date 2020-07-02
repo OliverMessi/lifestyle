@@ -1,3 +1,5 @@
+
+
 module.exports = {
   devServer: {
     open: true, //配置自动启动浏览器
@@ -23,6 +25,7 @@ module.exports = {
         'network':'@/network',
         'views':'@/views',
       }
+
     }
   },
 };

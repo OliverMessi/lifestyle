@@ -1,12 +1,14 @@
 <template>
-  <div>
-    这里是首页
-  </div>
+  <NavMenu/>
 </template>
 
 <script>
+  import NavMenu from "components/common/NavMenu"
   export default {
-    name: "Home"
+    name: "Home",
+    components:{
+        NavMenu
+    }
   }
 </script>
 
