@@ -7,7 +7,7 @@
         <carousel></carousel>
         <quick-nav style="float: left;margin-top: -450px;margin-right: 480px"></quick-nav>
       </div>
-      <update-card id="update-card"></update-card>
+      <update-card id="update-card" :updateRecords="updateRecords"></update-card>
       <about id="about"></about>
     </div>
   </div>
@@ -19,6 +19,8 @@
   import Carousel from './childCnps/Carousel'
   import SideMenu from './childCnps/SideMenu';
   import QuickNav from './childCnps/QuickNav';
+
+  import {getUpdateRecords} from "network/home"
   export default {
     name: "Home",
     components:{
@@ -27,6 +29,23 @@
         QuickNav,
         UpdateCard,
         About
+    },
+    data(){
+      return{
+        updateRecords:[]
+      }
+    },
+    created(){
+          this.getUpdateRecords();
+    },
+    methods:{
+        getUpdateRecords(){
+            getUpdateRecords().then(res=>{
+              this.updateRecords=res;
+
+            })
+
+        }
     }
 
   }
