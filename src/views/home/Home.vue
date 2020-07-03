@@ -8,13 +8,15 @@
         <quick-nav style="float: left;margin-top: -450px;margin-right: 480px"></quick-nav>
       </div>
       <update-card id="update-card" :updateRecords="updateRecords"></update-card>
-      <about id="about"></about>
+      <slogan id="slogan"></slogan>
+
     </div>
   </div>
 </template>
 
 <script>
-  import About from './childCnps/About'
+    import Slogan from './childCnps/Slogan'
+
   import UpdateCard from './childCnps/UpdateCard';
   import Carousel from './childCnps/Carousel'
   import SideMenu from './childCnps/SideMenu';
@@ -28,7 +30,7 @@
         Carousel,
         QuickNav,
         UpdateCard,
-        About
+        Slogan
     },
     data(){
       return{
@@ -57,6 +59,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: -20px;
+    margin-bottom: 50px;
   }
   #header-div {
     padding-bottom: 20px;
