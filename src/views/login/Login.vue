@@ -37,7 +37,7 @@
                         // this.$router.replace({path: '/home'})
                         this.$store.commit('login', this.loginForm);
                         var path = this.$route.query.redirect;
-                        this.$router.replace({path: path === '/' || path === undefined ? '/home' : path})
+                        this.$router.replace({path: path === '/' || path === undefined ? '/index' : path})
                     }
                 })
             }
