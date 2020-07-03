@@ -6,9 +6,9 @@
     </div>
     <div class="block">
       <el-timeline>
-        <el-timeline-item v-for="(item,index) in updateRecords" :key="index" :timestamp=item.timeStamp placement="top">
+        <el-timeline-item v-for="(item,index) in updateRecords" :color=color :key="index" :timestamp=item.timeStamp placement="top">
           <el-card>
-            <h4>{{item.content}}</h4>
+            <h4>{{item.content}}</h4> 
             <p>{{item.commitPersion}}提交于:{{item.createTime}}</p>
           </el-card>
         </el-timeline-item>
@@ -29,6 +29,11 @@
               }
           }
       },
+      data(){
+      return {
+          color: '#0bbd87'
+      }
+      }
   }
 </script>
 
