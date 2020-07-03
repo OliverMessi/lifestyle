@@ -7,12 +7,12 @@
 
 <script>
     import Footer from 'components/common/Footer'
-export default {
-     name: 'App',
+    export default {
+        name: 'App',
         components: {
             Footer
         }
-}
+    }
 </script>
 
 <style>
