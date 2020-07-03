@@ -5,7 +5,7 @@
   --color-text: #fff;/*定义的变量可以在其他地方使用*/
   --color-high-text: #EEE685;
   --color-navBar: #121212;
-  --color-background:  #fff;
+  --color-background:  #FFFAF0;
   --font-size: 14px;
   --line-height: 1.5;
 }
@@ -25,7 +25,7 @@ body {
   background: var(--color-background);
   color: var(--color-text);
   /* rem vw/vh */
-  width: 100vw;
+  /*width: 100vw;*/
 }
 
 a {

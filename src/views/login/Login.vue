@@ -47,7 +47,7 @@
 
 <style scoped>
     #login {
-        background: url("../../assets/img/bgy.jpg") no-repeat;
+        background: url("../../assets/img/bgy.jpg") ;
         background-position: center;
         height: 100%;
         width: 100%;

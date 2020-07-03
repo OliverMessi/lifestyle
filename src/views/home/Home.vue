@@ -1,17 +1,53 @@
 <template>
-  <NavMenu/>
+  <div style="margin-top: 40px">
+    <side-menu id="side-menu"></side-menu>
+    <div class="home">
+      <div id="header-div">
+        <div style="height: 150px"></div>
+        <carousel></carousel>
+        <quick-nav style="float: left;margin-top: -450px;margin-right: 480px"></quick-nav>
+      </div>
+      <update-card id="update-card"></update-card>
+      <about id="about"></about>
+    </div>
+  </div>
 </template>
 
 <script>
-  import NavMenu from "components/common/NavMenu"
+  import About from './childCnps/About'
+  import UpdateCard from './childCnps/UpdateCard';
+  import Carousel from './childCnps/Carousel'
+  import SideMenu from './childCnps/SideMenu';
+  import QuickNav from './childCnps/QuickNav';
   export default {
     name: "Home",
     components:{
-        NavMenu
+        SideMenu,
+        Carousel,
+        QuickNav,
+        UpdateCard,
+        About
     }
+
   }
 </script>
 
 <style scoped>
-
+  .home {
+    width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+  }
+  #header-div {
+    padding-bottom: 20px;
+    padding-left: 5px;
+    background-color: white;
+  }
+  #side-menu {
+    position: fixed;
+    margin-left: 50%;
+    left: -680px;
+    top: 100px;
+  }
 </style>

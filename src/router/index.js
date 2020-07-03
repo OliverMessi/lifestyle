@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 const Home = () => import('../views/home/Home');
+const Footprint = () => import('../views/footprint/Footprint');
 const Login = () => import('../views/login/Login');
 
 
@@ -16,6 +17,13 @@ const routes=[
   {
     path: '/home',
     component: Home,
+    meta: {
+        requireAuth: true
+    }
+  },
+  {
+    path: '/footprint',
+    component: Footprint,
     meta: {
         requireAuth: true
     }
