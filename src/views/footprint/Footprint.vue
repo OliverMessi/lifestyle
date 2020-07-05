@@ -1,10 +1,14 @@
 <template>
-    
+    <Map/>
 </template>
 
 <script>
+  import Map from "components/common/Map"
     export default {
-        name: "Footprint"
+        name: "Footprint",
+      components:{
+        Map
+      }
     }
 </script>
 

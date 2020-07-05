@@ -28,7 +28,7 @@
      width: 670px;
      height: 120px;
      position: absolute;
-     left:340px;
+     left:25.5%;
  }
   .monster {
     z-index: 2;
