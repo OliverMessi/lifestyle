@@ -1,5 +1,5 @@
 <template>
-  <div ref="map" style="height:600px;width:600px;" ></div>
+  <div ref="map" class="map" ></div>
 </template>
 
 <script>
@@ -26,5 +26,9 @@
 </script>
 
 <style scoped>
-
+.map{
+  height: 600px;
+  width: 600px;
+  position: absolute;
+}
 </style>
