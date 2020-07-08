@@ -25,7 +25,9 @@ module.exports = {
         'network':'@/network',
         'views':'@/views',
       }
-
+    },
+    externals: {
+        'AMap': 'AMap' // 高德地图配置
     }
   },
 };

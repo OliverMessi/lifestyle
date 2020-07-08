@@ -1,216 +1,110 @@
 export default {
-  tooltip: {
-    triggerOn: "click",
-    formatter: function(e, t, n) {
-      return .5 == e.value ? e.name + "：有疑似病例" : e.seriesName + "<br />" + e.name + "：" + e.value
-    }
-  },
-  visualMap: {
-    min: 0,
-    max: 1000,
-    left: 26,
-    bottom: 40,
-    showLabel: !0,
-    text: ["高", "低"],
-    pieces: [{
-      gt: 100,
-      label: "> 100 人",
-      color: "#7f1100"
-    }, {
-      gte: 10,
-      lte: 100,
-      label: "10 - 100 人",
-      color: "#ff5428"
-    }, {
-      gte: 1,
-      lt: 10,
-      label: "1 - 9 人",
-      color: "#ff8c71"
-    }, {
-      gt: 0,
-      lt: 1,
-      label: "疑似",
-      color: "#ffd768"
-    }, {
-      value: 0,
-      color: "#ffffff"
-    }],
-    show: !0
-  },
-  geo: {
-    map: "china",
-    roam: !1,
-    scaleLimit: {
-      min: 1,
-      max: 2
+    // visualMap: {
+    //     min: 0,
+    //     max: 1000,
+    //     left: 26,
+    //     bottom: 40,
+    //     showLabel: !0,
+    //     text: ["高", "低"],
+    //     pieces: [{
+    //         gt: 100,
+    //         label: "> 100 人",
+    //         color: "#7f1100"
+    //     }, {
+    //         gte: 10,
+    //         lte: 100,
+    //         label: "10 - 100 人",
+    //         color: "#ff5428"
+    //     }, {
+    //         gte: 1,
+    //         lt: 10,
+    //         label: "1 - 9 人",
+    //         color: "#ff8c71"
+    //     }, {
+    //         gt: 0,
+    //         lt: 1,
+    //         label: "疑似",
+    //         color: "#ffd768"
+    //     }, {
+    //         value: 0,
+    //         color: "#ffffff"
+    //     }],
+    //     show: !0
+    // },
+    // 加载 amap 组件
+    amap: {
+        // 3D模式，无论你使用的是1.x版本还是2.x版本，都建议开启此项以获得更好的渲染体验
+        viewMode: '3D',
+        // 高德地图支持的初始化地图配置
+        // 高德地图初始中心经纬度
+        center: [108.39, 39.9],
+        // 高德地图初始缩放级别
+        zoom: 4,
+        // 是否开启resize
+        resizeEnable: true,
+        // 自定义地图样式主题
+        mapStyle: "amap://styles/dark",
+        // 移动过程中实时渲染 默认为true 如数据量较大 建议置为false
+        renderOnMoving: true,
+        // 高德地图自定义EchartsLayer的zIndex，默认2000
+        echartsLayerZIndex: 2019,
+        // 说明：如果想要添加卫星、路网等图层
+        // 暂时先不要使用layers配置，因为存在Bug
+        // 建议使用amap.add的方式，使用方式参见最下方代码
+        rotateEnable:true,
+        pitchEnable:true,
+        pitch:80,
+        rotation:-15,
+        buildingAnimation:true,
     },
-    zoom: 1.23,
-    top: 120,
-    label: {
-      normal: {
-        show: !0,
-        fontSize: "14",
-        color: "rgba(0,0,0,0.7)"
-      }
+    animation: true,//是否开启动画
+    tooltip: {
+        show:true,//是否显示提示框组件
+        trigger: 'item',
+        triggerOn: "click",
+        axisPointer:{
+        type:"line",
+        axios:"auto",
+        },
+        padding: [5, 10],
+        textStyle:{
+            fontStyle:'normal'
+        }
     },
-    itemStyle: {
-      normal: {
-        //shadowBlur: 50,
-        //shadowColor: 'rgba(0, 0, 0, 0.2)',
-        borderColor: "rgba(0, 0, 0, 0.2)"
-      },
-      emphasis: {
-        areaColor: "#f2d5ad",
-        shadowOffsetX: 0,
-        shadowOffsetY: 0,
-        borderWidth: 0
-      }
-    }
-  },
-  series: [{
-    name: "确诊病例",
-    type: "map",
-    geoIndex: 0,
-    data:[{
-      name: "南海诸岛",
-      value: 0
-    },
-      {
-        name: '北京',
-        value: 54
-      },
-      {
-        name: '天津',
-        value: 13
-      },
-      {
-        name: '上海',
-        value: 40
-      },
-      {
-        name: '重庆',
-        value: 75
-      },
-      {
-        name: '河北',
-        value: 13
-      },
-      {
-        name: '河南',
-        value: 83
-      },
-      {
-        name: '云南',
-        value: 11
-      },
-      {
-        name: '辽宁',
-        value: 19
-      },
-      {
-        name: '黑龙江',
-        value: 15
-      },
-      {
-        name: '湖南',
-        value: 69
-      },
-      {
-        name: '安徽',
-        value: 60
-      },
-      {
-        name: '山东',
-        value: 39
-      },
-      {
-        name: '新疆',
-        value: 4
-      },
-      {
-        name: '江苏',
-        value: 31
-      },
-      {
-        name: '浙江',
-        value: 104
-      },
-      {
-        name: '江西',
-        value: 36
-      },
-      {
-        name: '湖北',
-        value: 1052
-      },
-      {
-        name: '广西',
-        value: 33
-      },
-      {
-        name: '甘肃',
-        value: 7
-      },
-      {
-        name: '山西',
-        value: 9
-      },
-      {
-        name: '内蒙古',
-        value: 7
-      },
-      {
-        name: '陕西',
-        value: 22
-      },
-      {
-        name: '吉林',
-        value: 4
-      },
-      {
-        name: '福建',
-        value: 18
-      },
-      {
-        name: '贵州',
-        value: 5
-      },
-      {
-        name: '广东',
-        value: 98
-      },
-      {
-        name: '青海',
-        value: 1
-      },
-      {
-        name: '西藏',
-        value: 0
-      },
-      {
-        name: '四川',
-        value: 44
-      },
-      {
-        name: '宁夏',
-        value: 4
-      },
-      {
-        name: '海南',
-        value: 22
-      },
-      {
-        name: '台湾',
-        value: 3
-      },
-      {
-        name: '香港',
-        value: 5
-      },
-      {
-        name: '澳门',
-        value: 5
-      }
+    series: [
+        {
+            name: "足迹",
+            type: "scatter",
+            // 使用高德地图坐标系
+            coordinateSystem: "amap",
+            // 数据格式跟在 geo 坐标系上一样，每一项都是 [经度，纬度，数值大小，其它维度...]
+            data: [[120, 30, 8], [120.1, 30.2, 20]],
+            // symbolSize: function (val) {
+            //     return val[2] / 10;
+            // },
+            encode: {
+                value: 2
+            },
+            showEffectOn: 'render',
+            rippleEffect: {
+                brushType: 'stroke'
+            },
+            hoverAnimation: true,
+            label: {
+                normal: {
+                    formatter: '{b}',
+                    position: 'right',
+                    show: true
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: '#fff',
+                    shadowBlur: 10,
+                    shadowColor: '#333'
+                }
+            },
+            zlevel: 1
+        }
     ]
-  }]
 };
