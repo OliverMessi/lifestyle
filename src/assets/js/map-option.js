@@ -43,7 +43,7 @@ export default {
         // 是否开启resize
         resizeEnable: true,
         // 自定义地图样式主题
-        mapStyle: "amap://styles/dark",
+        mapStyle: "amap://styles/darkblue",
         // 移动过程中实时渲染 默认为true 如数据量较大 建议置为false
         renderOnMoving: true,
         // 高德地图自定义EchartsLayer的zIndex，默认2000
@@ -51,11 +51,11 @@ export default {
         // 说明：如果想要添加卫星、路网等图层
         // 暂时先不要使用layers配置，因为存在Bug
         // 建议使用amap.add的方式，使用方式参见最下方代码
-        rotateEnable:true,
-        pitchEnable:true,
-        pitch:80,
-        rotation:-15,
-        buildingAnimation:true,
+        // rotateEnable:true,
+        // pitchEnable:true,
+        // pitch:80,
+        // rotation:-15,
+        // buildingAnimation:true,
     },
     animation: true,//是否开启动画
     tooltip: {
