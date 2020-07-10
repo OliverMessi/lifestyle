@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 40px">
+  <div >
     <side-menu id="side-menu"></side-menu>
     <div class="home">
       <div id="header-div">

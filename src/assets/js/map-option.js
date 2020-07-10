@@ -78,7 +78,7 @@ export default {
             // 使用高德地图坐标系
             coordinateSystem: "amap",
             // 数据格式跟在 geo 坐标系上一样，每一项都是 [经度，纬度，数值大小，其它维度...]
-            data: [[120, 30, 8], [120.1, 30.2, 20]],
+            data: [[120, 30, 8], [120.1, 32, 20]],
             // symbolSize: function (val) {
             //     return val[2] / 10;
             // },
