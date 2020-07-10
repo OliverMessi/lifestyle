@@ -63,7 +63,7 @@
         position: absolute;
         height: 800px;
         width: 70%;
-        margin-left:20%;;
+        margin-left:20%;
         margin-right: auto;
         margin-top: 40px;
         margin-bottom: 50px;
