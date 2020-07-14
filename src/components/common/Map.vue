@@ -45,9 +45,9 @@
                 // })
                 // 下边就可以按照高德官方API随意调用了
                 // 比如添加一些控件
-                amap.addControl(new AMap.MapType());//地图类型切换插件
+                // amap.addControl(new AMap.MapType());//地图类型切换插件
                 amap.addControl(new AMap.Scale());//地图比例尺插件
-                amap.addControl(new AMap.ToolBar());//地图工具条插件
+                //amap.addControl(new AMap.ToolBar());//地图工具条插件
                 // 添加一些图层 卫星图层/交通路网等等
                 // var satelliteLayer = new AMap.TileLayer.Satellite();
                 // var roadNetLayer = new AMap.TileLayer.RoadNet();
