@@ -338,16 +338,16 @@ export default {
                 effect: {
                     show: true,
                     period: 4, //箭头指向速度，值越小速度越快
-                    trailLength: 0.02, //特效尾迹长度[0,1]值越大，尾迹越长重
-                    symbol: 'arrow', //箭头图标
+                    trailLength: 0.6, //特效尾迹长度[0,1]值越大，尾迹越长重
+                    symbol: 'arrow', //圆形图标
                     symbolSize: 3, //图标大小
                 },
                 lineStyle: {
                     normal: {
                         color: '#DAA520',
                         width: 0.1, //尾迹线条宽度
-                        opacity: 0.5, //尾迹线条透明度
-                        curveness: .3 //尾迹线条曲直度
+                        opacity: 0.3, //尾迹线条透明度
+                        curveness: .1 //尾迹线条曲直度
                     }
                 },
                 data: convertToLineData(mapData[0], geoGpsMap[1])
