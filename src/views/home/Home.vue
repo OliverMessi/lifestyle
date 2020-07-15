@@ -65,6 +65,7 @@
     padding-bottom: 20px;
     padding-left: 5px;
     background-color: white;
+    margin-top: 90px;
   }
   #side-menu {
     position: fixed;
